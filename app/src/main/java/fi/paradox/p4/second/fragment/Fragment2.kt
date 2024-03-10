@@ -18,8 +18,6 @@ class Fragment2 : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(requireActivity()).get(CounterViewModel::class.java)
-
     }
 
     override fun onCreateView(
@@ -27,7 +25,7 @@ class Fragment2 : BaseFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.pretty_layout, container, false)
+        return inflater.inflate(R.layout.fragment_layout, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -38,8 +36,5 @@ class Fragment2 : BaseFragment() {
         view.findViewById<TextView>(R.id.item)?.let {
             it.setText(this@Fragment2.toString())
         }
-//        view.setOnClickListener {
-//            viewModel.incrementCounter()
-//        }
     }
 }
